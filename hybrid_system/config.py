@@ -20,8 +20,11 @@ class Config:
     CATEGORIES_FILE: str = os.path.normpath(os.path.join(INPUT_DIR, "dict_ingr2cate - Top300+FDB400+HyperFoods104=616.csv"))
     EMBEDDING_FILE: str = os.path.normpath(os.path.join(OUTPUT_DIR, "kitchenette_embeddings.pkl"))
     
-    # ChefTransformer settings
+    # Model Configuration
     MODEL_NAME: str = "flax-community/t5-recipe-generation"
+    MODEL_CACHE_DIR: str = "model_cache"
+    
+    # ChefTransformer settings
     GENERATION_CONFIG: Dict[str, Any] = {
         "max_length": 512,
         "min_length": 64,
